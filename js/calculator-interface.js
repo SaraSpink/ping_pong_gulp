@@ -1,4 +1,4 @@
-var Calculator = require('./../js/pingpong.js').calculatorModule;
+import { Calculator } from './../js/pingpong.js';
 
 $(document).ready(function() {
   $('#calculator').submit(function(event) {
@@ -7,7 +7,7 @@ $(document).ready(function() {
     var num2 = parseInt($('#num2').val());
     var simpleCalculator = new Calculator("hot pink");
     var output;
-    
+
     $("#add").click(function() {
       var output = simpleCalculator.addnum(num1, num2);
       $("#output").text(output);

@@ -1,8 +1,9 @@
-function Calculator(skinName) {
+export class Calculator {
+  constructor(skinName) {
   this.skin = skinName;
 }
 
-Calculator.prototype.pingPong = function(goal) {
+pingPong(goal) {
   var output = [];
   for (var i = 1; i <= goal; i++) {
     if (i % 15 === 0) {
@@ -16,22 +17,21 @@ Calculator.prototype.pingPong = function(goal) {
     }
   }
   return output;
-};
+}
 
-Calculator.prototype.addnum = function(a, b) {
+addnum(a, b) {
   return a + b;
-};
+}
 
-Calculator.prototype.subtractnum = function(a, b) {
+subtractnum(a, b) {
   return a - b;
-};
+}
 
-Calculator.prototype.multiplynum = function(a, b) {
+multiplynum(a, b) {
   return a * b;
-};
+}
 
-Calculator.prototype.dividenum = function(a, b) {
+dividenum(a, b) {
   return a / b;
-};
-
-exports.calculatorModule = Calculator;
+}
+}
